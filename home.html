@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page of website</title>
+    <link rel="stylesheet" href="chatbot2.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        body {
+            width: 100%;
+            background-color: rgb(241, 233, 233);
+
+        }
+
+        #box2 {
+            padding-left: 28%;
+        }
+
+        #box3 {
+            padding-left: 19%;
+        }
+
+        nav {
+            padding-top: 1px;
+            padding-bottom: 0.05cm;
+            padding-left: 0.2cm;
+            padding-right: 0.2cm;
+            position: sticky;
+            top: 0%;
+        }
+
+        #service {
+
+            margin: 0cm;
+            display: flex;
+        }
+
+        .container {
+            margin: 1px;
+            text-align: center;
+            text-decoration: wavy;
+            text-shadow: #00ff00;
+            border-radius: 8%;
+        }
+
+        #image {
+            display: flex;
+            margin: 6px;
+            height: 6cm;
+            border-radius: 8%;
+
+        }
+
+        #footer {
+            background-color: #6f9196;
+            height: 3.7cm;
+            display: flex;
+            justify-content: center;
+        }
+
+        #about {
+            display: flex;
+            height: 7cm;
+            width: 12cm;
+
+
+        }
+
+        #aboutus {
+            display: flex;
+            margin: auto;
+            margin: 0.6cm;
+            color: black;
+        }
+
+        button {
+            background-color: blue;
+            background-origin: padding-box;
+            height: 1cm;
+            border-radius: 12cm;
+            width: 3.5cm;
+            color: white;
+            animation: alternate;
+        }
+
+        .img {
+            height: 7cm;
+            width: 1cm;
+            padding-top: 17px;
+            padding-right: 17px;
+        }
+
+        .bot {
+            display: flex;
+            justify-content: center;
+        }
+
+        hr {
+            border-width: 0.001cm;
+            border-color: rgb(41, 40, 39);
+            border-block-start-width: 0cqh;
+        }
+
+        .teammate {
+            margin: 29px;
+            text-align: center;
+            text-decoration: wavy;
+            text-shadow: #00ff00;
+            border-radius: 50%;
+            padding-left: 12px;
+            border-color: rgb(241, 233, 233);
+        }
+
+        #team {
+
+            margin: 0cm;
+            display: flex;
+
+        }
+
+        .img1 {
+            height: 7cm;
+            width: 1cm;
+            border-radius: 50%;
+        }
+
+        nav {
+            position: sticky;
+            top: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="interface.html" ><img id="box1" src="nexus.jpg" alt="logo"
+            style="color:aquamarine;height: 1cm;width: 4cm;border-color:blue;float:left;border-radius: 0%;border-color:blue;border-width: 12cm" /></a>
+        <a id="box2" href="chatbot1.html"><input type="text"
+                style="color:rgb(23, 27, 29);background-color:rgb(245, 241, 249);height:1cm;width:3cm;border-radius: 40cm;text-align:left;height:0.9cm;width:7cm"
+                placeholder="       Use Chatbot Search..." title="Click to search from google" name="search" /></a>
+        <a id="box3" href="newaccount.html"><input type="button"
+                style="color:white;background-color:blueviolet;height:1cm;width:3cm;border-radius:12cm;" value="Sign Up"
+                title="Click to sign up" name="signup" /></a>
+        <a id="box4" href="login.html"><input type="button"
+                style="color:rgb(246, 230, 230);background-color:blueviolet;height:1cm;width:3cm;border-radius:12cm;"
+                value="login" name="login" title="Click to sign up" /></a>
+    </nav>
+    <marquee behavior="alternate" direction="right" scrollamount="13" style="background-color: rgb(14, 15, 15);">
+        <div id="image">
+            <img src="dseu.jpg" alt="college" style="width:7cm">
+            <img src="dseu.jpg" alt="college" style="width:7cm">
+            <img src="dseu.jpg" alt="college" style="width:7cm">
+            <img src="dseu.jpg" alt="college" style="width:7cm">
+            <img src="dseu.jpg" alt="college" style="width:7cm">
+            <img src="dseu.jpg" alt="college" style="width:7cm" />
+        </div>
+    </marquee>
+    <!--<hr>-->
+    <h2 style="color: blue;text-align:center;padding-left:0.5cm">Services Provided by nexus!!
+    </h2>
+    <div id="service">
+
+        <div class="container"
+            style="border-style:solid;height:6cm;width:6cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:magenta">
+            ERP Service
+            <div class="img"><img src="erp.jpg" alt="consultancy" style="height: 5cm;width:6cm; border: radius 10%;" />
+            </div>
+        </div>
+        <div class="container"
+            style="border-style:solid;height:6cm;width:6cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:magenta">
+            Business Consultancy
+            <div class="img"><img src="consultancy.jpg" alt="consultancy" style="height: 5cm;width:6cm" /></div>
+        </div>
+        <div class="container"
+            style="border-style:solid;height:6cm;width:6cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:magenta">
+            Digital Marketing
+            <div class="img"><img src="digital.jpg" alt="consultancy" style="height: 5cm;width:6cm" /></div>
+        </div>
+        <div class="container"
+            style="border-style:solid;height:6cm;width:6cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:magenta;border-radius: 10%">
+            Nexus Institute of Technology
+            <div class="img"><img src="college1.jpg" alt="consultancy" style="height: 5cm;width:6cm" /></div>
+        </div>
+        <a href="https://dseu.ac.in/" style="text-decoration:none;" title="Click to visit!!">
+            <div class="container"
+                style="border-style:solid;height:6cm;width:6cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:magenta">
+                Delhi Skill and Enterpreneurship University
+                <div class="img"><img src="dseu.jpg" alt="consultancy" style="height: 4.5cm;width:6cm" /></div>
+            </div>
+        </a>
+
+    </div>
+    <!--<hr>-->
+    <div id="aboutus">
+        <div class="about"
+            style="color:rgb(44, 41, 41);height:5cm;width:13cm;padding-left:12px;padding-right:12px;padding-top:12px; font-family: 'Poppins', sans-serif;font-size:smaller">
+            Anyone can design, manage, and develop web presence precisely the way they want with the Nexus.pvt.ltd. We
+            provide a web-based ERP system with an advanced theme to customize your website’s looks and feel that
+            matches your brand. We provide a customizable ERP web-based system so that we can provide only what youneed.
+            The responsive website provides the optimal experience for a wide range of devices — mobiles, tablets, and
+            computers. Also, enhance the visibility of your products/services with SEO optimization and
+            socialpromotions. Expand your reach globally and engage your audiences in minutes with a full business
+            website. Our ERP website is user-friendly and highly effective which makes it easy to use and accelerate
+            your work. Our ERP web system is built with the latest technology and features, that make your business
+            processes run easy and fast.
+
+            Get the Free Demo today!!<br>
+            <div style="display: flex;">
+                <pre><a href="chatbot1.html"><button >Contact Us</button></a>  <a href="internshala/trash/premium.html"><button >premium plans</button></a></pre>
+            </div>
+        </div>
+        <div class="about"
+            style="border-style: none;height:9cm;width:9cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:whitesmoke">
+            <marquee behavior="scroll" srollamount="0" direction="down" style="color:#00ff00">
+                <ul style="list-style-type: disc;">
+                    <a href="studentform1.html" style="color:#00ff00">
+                        <li>Student Registration form</li>
+                    </a>
+                    <hr>
+                    <li>Recent Article</li>
+                    <hr>
+                    <li>Newsletter</li>
+                    <hr>
+                    <li>News</li>
+                    <hr>
+                    <li>Anouncement</li>
+                    <hr>
+                    <li>Discount on ERP</li>
+                    <hr>
+                    <li>ERP</li>
+                    <hr>
+                    <li>Want to Meet?</li>
+
+                </ul>
+            </marquee>
+        </div>
+        <div class="about" style="width: 12cm;"><img src="website.png" alt="img" /> </div>
+    </div>
+    <div class="bot" style="display: flex;height: 15.2cm;">
+        <div class="wrapper">
+            <div class="title">Nexus Chatbot</div>
+            <div class="form">
+                <div class="bot-inbox inbox">
+                    <div class="icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="msg-header">
+                        <p>Hello there, how can I help you?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="typing-field" style="width: 7.3cm;">
+                <div class="input-data">
+                    <input id="data" type="text" placeholder="Type something here.." required>
+                    <button id="send-btn" style="float:right">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#send-btn").on("click", function () {
+                    $value = $("#data").val();
+                    $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>' + $value + '</p></div></div>';
+                    $(".form").append($msg);
+                    $("#data").val('');
+
+                    $.ajax({
+                        url: 'message.php',
+                        type: 'POST',
+                        data: 'text=' + $value,
+                        success: function (result) {
+                            $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>' + result + '</p></div></div>';
+                            $(".form").append($replay);
+                            $(".form").scrollTop($(".form")[0].scrollHeight);
+                        }
+                    });
+                });
+            });
+        </script>
+        <!--<div class="bot" style="color:beige">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sint possimus quia odio maiores ut iure
+                doloribus, eum facere veniam enim veritatis id expedita similique dolor sequi consequatur provident
+                nemo.</p>
+        </div>-->
+    </div>
+
+    <h2 style="color: blue;text-align:center;padding-left:0.5cm"> By Team JAVA!!
+    </h2>
+    <div id="team">
+        <div class="teammate"
+            style="border-style:solid;height:6cm;width:6cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:magenta">
+            <a href="https://www.linkedin.com/in/aakash-sharma-69aa38273/"
+                style="text-decoration-color: rgb(157, 203, 203);" title="Click to Known!!"> Aakash Sharma
+                <hr>
+            </a>
+            <a href="WhatsApp Image 2023-11-28 at 11.05.39 AM.jpeg" title="Click to view!!">
+                <div class="img1"><img src="WhatsApp Image 2023-11-28 at 11.05.39 AM.jpeg" alt="consultancy"
+                        style="height: 6cm;width:6cm;border-radius: 50%;" /></div>
+        </div></a>
+        <div class="teammate"
+            style="border-style:solid;height:6cm;width:6cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:magenta">
+            </a><a href="https://www.linkedin.com/in/jayram-sharma-a6343b211" title="Click to Known"></a>Jayram
+            Sharma
+            <hr>
+            </a>
+            <a href="/consultancy.jpg" title="Click to view!!">
+                <div class="img1"><img src="consultancy.jpg" alt="consultancy"
+                        style="height: 6cm;width:6cm;border-radius: 50%;" /></div>
+        </div></a>
+        <div class="teammate"
+            style="border-style:solid;height:6cm;width:6cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:magenta">
+            Aman Singh
+            <hr>
+            <a href="/consultancy.jpg" title="Click to view!!">
+                <div class="img1"><img src="digital.jpg" alt="consultancy"
+                        style="height: 6cm;width:6cm;border-radius: 50%;" /></div>
+        </div></a>
+        <div class="teammate"
+            style="border-style:solid;height:6cm;width:6cm;padding-left:12px;padding-right:12px;padding-top:12px;font-family:'Times New Roman', Times, serif;color:magenta">
+            Vidit
+            <hr>
+            <a href="/consultancy.jpg" title="Click to view!!">
+                <div class="img1"><img src="college1.jpg" alt="consultancy"
+                        style="height: 6cm;width:6cm;border-radius: 50%;" /></div>
+        </div></a>
+    </div><br>
+
+    <div id="footer">
+        <footer>
+            <div style="text-align:center;padding-top: 3px;">
+                <img id="box1" src="nexus.jpg" alt="logo" style="height:0.7cm" />
+                <p
+                    style="font-family:'Times New Roman', Times, serif;font-size:small;color:rgb(16, 15, 16);text-align:center">
+                    Email: <a href="mailto:jayramsharma0402@gmail.com">jayramsharma0402@gmail.com</a>
+                </p>
+                <p style="font-size:small;color:rgb(16, 15, 16);text-align:center">&copy Nexus.pvt.ltd. All Rights are
+                    Reserved.</p>
+                <p style="font-size:small;color:rgb(16, 15, 16);text-align:center">Privacy Policy | Disclaimer | Terms
+                    and Conditions</p>
+            </div>
+        </footer>
+
+
+
+
+</body>
+
+</html>
