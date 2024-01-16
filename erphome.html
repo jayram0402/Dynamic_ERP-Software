@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Home page</title>
+    <link rel="stylesheet" href="todo1.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>   
+    <link rel="icon" type="image/x-icon" href="to do.png">
+    <link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="notification.css">
+    <style>
+        nav {
+            display: flex;
+            justify-content: left;
+            position: sticky;
+            top: 0%;
+            background-color: #3498db;
+            padding-top: 6px;
+            padding-bottom: 1px;
+            color: #fff;
+            padding-left: 5px;
+        }
+
+        .add {
+            display: flex;
+            gap: 39px;
+            justify-content: center;
+            
+        }
+
+        .circle {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        #box1 {
+            font-size: large;
+        }
+
+        img {
+            height: 2cm;
+        }
+
+        #taskbar {
+            display: flex;
+            justify-content: left;
+            background-color: rgb(241, 233, 233);
+            pointer-events: visibleFill;
+            position: sticky;
+            bottom: 0%;
+            padding-top: 6px;
+        }
+
+        .task {
+            border-radius: 50%;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            /* Light gray background */
+            color: #333;
+            /* Dark gray text */
+        }
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background_image.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 1ms ease-in-out;
+            backdrop-filter: blur(10px);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        #logo {
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #main-content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/WhatsApp Image 2023-11-28 at 11.05.39 AM.jpeg">
+            <div class="box1" style="float: center">
+                <img src="WhatsApp Image 2023-11-28 at 11.05.39 AM.jpeg" alt="logo"
+                    style="border-color: black;height: 0.7cm;width:0.7cm; border-radius:50%" />
+            </div>
+        </a>
+        <div class="box1" style="float: right;padding-left: 14cm;">
+            <input type="text" name="search" placeholder="Search.." title="Click to search"
+                style="height: 0.7cm;width:6cm;" />
+        </div>
+        <div class="box1" style="float: center; padding-left: 9cm;">
+            <img src="notification.jpg" alt="logo"  id="notification-container" 
+                style="border-color: black;height: 0.7cm;width:0.7cm;border-radius:50%"  />   
+            </div>
+        <div class="box1" style="float: center">
+            <img src="anouncement.jpg" alt="logo"
+                style="padding-left: 0.9cm;border-color: black;height: 0.7cm;width:0.7cm;border-radius:20%" />
+        </div>
+    </nav><br>
+    <!--<hr style="box-shadow:#C5FAD5">-->
+    <div class="add">
+        <div class="a" style="display: flex;justify-content: center;align-items: center;">
+            <!-- main todo container -->
+            <div class="container">
+                <!-- header that has input and add button -->
+                <div class="header">
+                    <h1>Todo List</h1>
+
+                    <div class="input-section">
+                        <input id="todo-input" type="text" placeholder="📑 Add your todo here.."
+                            class="input w-full max-w-xs" />
+                        <button id="add-button" class="btn btn-add ">
+                            <i class="bx bx-plus bx-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- delete buttons -->
+
+                <div class="todos-filter">
+
+                    <button id="delete-selected" class="btn btn-ghost delete-selected-btn">
+                        Delete Selected
+                    </button>
+                    <button id="delete-all" class="btn btn-ghost delete-all-btn">
+                        Delete All
+                    </button>
+                </div>
+
+
+                <!-- this is the dynamic content which dds ups all the todos -->
+                <ul id="all-todos" class="todos-list">
+
+                </ul>
+
+
+                <!-- dropdown throgh which we can apply filters -->
+                <div class="filters">
+                    <div class="dropdown">
+                        <button class="dropbtn">Filter</button>
+                        <div class="dropdown-content">
+                            <a href="#" id="all">All</a>
+                            <a href="#" id="rem">Pending</a>
+                            <a href="#" id="com">Completed</a>
+                        </div>
+                    </div>
+
+                    <!-- value showing completed task and all -->
+                    <div class="completed-task">
+                        <p>Completed: <span id="c-count">0</span></p>
+                    </div>
+                    <div class="remaining-task">
+                        <p>Total Tasks: <span id="r-count">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JS -->
+            <script src="index.js"></script>
+        </div>
+        <div class="b" style="display: flex;justify-content: center;align-items: center;">
+            <!-- main todo container -->
+            <div class="container" style=" background-color: #ffcc00;">
+                <!-- header that has input and add button -->
+                <div class="header">
+                    <h1>Assignments</h1>
+
+                    <div class="input-section">
+                        <input id="todo-input" type="file" placeholder="📑 upload your file here.."
+                            class="input w-full max-w-xs" />
+                        <button id="add-button" class="btn btn-add ">
+                            <i class="bx bx-plus bx-sm"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- delete buttons -->
+
+                <div class="todos-filter">
+
+                    <button id="delete-selected" class="btn btn-ghost delete-selected-btn">
+                        Delete Selected
+                    </button>
+                    <button id="delete-all" class="btn btn-ghost delete-all-btn">
+                        Delete All
+                    </button>
+                </div>
+
+
+                <!-- this is the dynamic content which dds ups all the todos -->
+                <ul id="all-todos" class="todos-list">
+
+                </ul>
+
+
+                <!-- dropdown throgh which we can apply filters -->
+                <div class="filters">
+                    <div class="dropdown">
+                        <button class="dropbtn">Previous</button>
+                        <div class="dropdown-content">
+                            <a href="#" id="all">All</a>
+                            <a href="#" id="rem">Pending</a>
+                            <a href="#" id="com">Completed</a>
+                        </div>
+                    </div>
+
+                    <!-- value showing completed task and all -->
+                    <div class="completed-task">
+                        <p>Submitted: <span id="c-count">0</span></p>
+                    </div>
+                    <div class="remaining-task">
+                        <p>Total Assignments: <span id="r-count">0</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- JS -->
+        <script src="index.js"></script>
+    </div>
+        <br>
+        <div class="contain" style="background-color: #ffcc00;
+    color: #fff;">
+            <form id="settingsForm">
+<hr>
+                <div class="section">
+                    <h2>Profile</h2>
+                    <label for="profilePicture">Profile Picture:</label>
+                    <input type="file" id="profilePicture" accept="image/*">
+
+                </div>
+
+
+                <div class="section">
+                    <h2>View Attendance</h2>
+
+                </div>
+
+
+                <a href="result.html" ><div class="section">
+                    <h2>View Result</h2>
+
+                </div></a>
+
+
+                 
+                    <a href="studentform1.html"><div class="section">
+                    <h2>Registration</h2>
+                </div></a>
+
+                <!-- Security Section -->
+                <div class="section">
+                    <h2>Fee Payment</h2>
+                    <!-- Add security settings here -->
+                </div>
+
+                <!-- Connected Accounts Section -->
+                <a href="feestatus.html"><div class="section">
+                    <h2>Fee Status</h2>
+                    <!-- Add connected accounts settings here -->
+                </div></a>
+
+                <!-- Language and Region Section -->
+                <div class="section">
+                    <h2>Teachers List</h2>
+                    <!-- Add language and region settings here -->
+                </div>
+
+                <!-- Deactivation/Deletion Section -->
+                <a href="studentinfo.html"><div class="section">
+                    <h2>Student Information</h2>
+                    <!-- Add account deactivation/deletion settings here -->
+                </div></a>
+
+                <!-- Help and Support Section -->
+                <a href="feedback.html"><div class="section">
+                    <h2>Feedback</h2>
+                    <!-- Add help and support information here -->
+                </div></a>
+
+                <button type="submit" style="height: 1cm;width: 4cm;text-align:center">Go to top</button><hr>
+            </form>
+        
+
+        <script src="script.js"></script>
+        </div>
+        <div id="taskbar" style="display: flexbox;position:sticky;">
+            <div class="task" style="border-radius: 50%;">
+                <img src="home.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:1cm;
+            width:0.7cm;" />
+            </div>
+            <div class="task">
+               <a href="comment.html"> <img src="chat.jpg" alt="logo" style="border-color: black; height: 0.7cm; padding-left:6cm;
+            width:0.7cm;" /></a>
+            </div>
+            <div class="task">
+                <a href="attendance.html"><img src="attendance.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:8cm;
+            width:0.7cm;" /></a>
+            </div>
+            <a href="payment.html">
+                <div class="task">
+                    <img src="payment.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:8cm;
+            width:0.7cm;" />
+                </div>
+            </a>
+            <div class="task">
+                <a href="setting.html"><img src="setting.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:6cm;
+            width:0.7cm;" /></a>
+            </div>
+        </div><script src="notification.js"></script>
+        
+</body>
+
+</html>

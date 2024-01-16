@@ -1,0 +1,77 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-left: 10px;
+    background-color: #f4f4f4;
+}
+
+.contain {
+    max-width: 800px;
+    margin-left: 245px;
+    padding-right: 2px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: red;
+}
+
+h1, h2 {
+    color: #433d3d;
+    text-align: center;
+    
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+    }
+}
+#taskbar {
+    display: flex;
+    justify-content: left;
+    background-color: rgb(241, 233, 233);
+    pointer-events: visibleFill;
+    position: sticky;
+    bottom: 0%;
+    padding-top: 6px;
+}
+.task{
+    border-radius: 50%;
+}

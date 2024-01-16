@@ -1,0 +1,123 @@
+
+[ 
+    { 
+        "id": 1001, 
+        "imageUrl": "profile_2.jpeg", 
+        "firstName": "Aman", 
+        "lastName": "Singh", 
+        "email": "aman123@gmail.com", 
+        "contactNumber": "9084823299", 
+        "age": 18, 
+        "dob": "26/11/2006", 
+        "salary": 1, 
+        "address": "Address1"
+    }, 
+    { 
+        "id": 1003, 
+        "imageUrl": "profile_1.jpeg", 
+        "firstName": "Preeti ", 
+        "lastName": "Singh", 
+        "email": "preetisingh12@gmail.com", 
+        "contactNumber": "70554172783", 
+        "age": 19, 
+        "dob": "06/10/2004", 
+        "salary": 3, 
+        "address": "Address3"
+    }, 
+    { 
+        "id": 1002, 
+        "imageUrl": "profile_2.jpeg", 
+        "firstName": "Aakash", 
+        "lastName": "Sharma", 
+        "email": "aakash12@gmail.com", 
+        "contactNumber": "9997632681", 
+        "age": 20, 
+        "dob": "28/06/2003", 
+        "salary": 2, 
+        "address": "Address2"
+    }, 
+    { 
+        "id": 1004, 
+        "imageUrl": "profile_1.jpeg", 
+        "firstName": "Priyanshi", 
+        "lastName": "Sharma", 
+        "email": "priyanshi123@gmail.com", 
+        "contactNumber": "4443995334", 
+        "age": 19, 
+        "dob": "06/09/2004", 
+        "salary": 4, 
+        "address": "Address4"
+    },
+    { 
+        "id": 1009, 
+        "imageUrl": "profile_2.jpeg", 
+        "firstName": "Vidit", 
+        "lastName": "", 
+        "email": "vidit61@gmail.com", 
+        "contactNumber": "4394091994", 
+        "age": 19, 
+        "dob": "17/08/2004", 
+        "salary": 9, 
+        "address": "Address9"
+    }, 
+    { 
+        "id": 1010, 
+        "imageUrl": "profile_1.jpeg", 
+        "firstName": "Akriti", 
+        "lastName": "", 
+        "email": "akriti51@gmail.com", 
+        "contactNumber": "4622392580", 
+        "age": 20, 
+        "dob": "21/20/2003", 
+        "salary": 10, 
+        "address": "Address10"
+    }, 
+    { 
+        "id": 1005, 
+        "imageUrl": "profile_2.jpeg", 
+        "firstName": "Krish", 
+        "lastName": "Gandhi", 
+        "email": "krish34@gmail.com", 
+        "contactNumber": "4505692843", 
+        "age": 19, 
+        "dob": "14/03/2003", 
+        "salary": 5, 
+        "address": "Address5"
+    }, 
+    { 
+        "id": 1006, 
+        "imageUrl": "profile_2.jpeg", 
+        "firstName": "Jayram", 
+        "lastName": "Sharma", 
+        "email": "jayramsharma41@gmail.com", 
+        "contactNumber": "4746199430", 
+        "age": 18, 
+        "dob": "24/07/2005", 
+        "salary": 6, 
+        "address": "Address6"
+    }, 
+    { 
+        "id": 1007, 
+        "imageUrl": "profile_2.jpeg", 
+        "firstName": "Akash", 
+        "lastName": "Sharma", 
+        "email": "aakash12@gmail.com", 
+        "contactNumber": "4859095720", 
+        "age": 21, 
+        "dob": "26/12/2002", 
+        "salary": 7, 
+        "address": "Address7"
+    }, 
+    { 
+        "id": 1008, 
+        "imageUrl": "profile_2.jpeg", 
+        "firstName": "Vikram", 
+        "lastName": "Singh", 
+        "email": "vikram514@gmail.com", 
+        "contactNumber": "4379190775", 
+        "age": 19, 
+        "dob": "24/06/1986", 
+        "salary": 8, 
+        "address": "Address8"
+    }
+]

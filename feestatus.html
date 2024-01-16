@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fee status</title>
+    <link rel="stylesheet" href="task.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            margin-top: 2cm;
+        }
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        section {
+            background-color: #e89f9f;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 5cm;
+             
+        }
+
+        .fee-status {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .fee-submission-status {
+            margin-bottom: 20px;
+        }
+
+        .edit-button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .edit-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>fee Status</h1>
+    </header>
+
+    <section>
+        <h2>Fee Status</h2><hr>
+        <p class="fee-status">Status: <strong>Paid</strong></p>
+
+        <h3>Fee Submission Status</h3><hr>
+        <p class="fee-submission-status" id="submissionStatus">Submission: <strong>Approved</strong></p>
+
+        <button class="edit-button" onclick="editSubmissionStatus()">Edit Submission Status</button>
+        <a href="feereceipt.html"><button class="edit-button" >Check receipt</button></a>
+    </section>
+
+    <script>
+        function editSubmissionStatus() {
+            const currentStatus = document.getElementById('submissionStatus').innerText;
+            const updatedStatus = prompt('Enter new submission status:', currentStatus);
+            
+            if (updatedStatus !== null && updatedStatus !== '') {
+                document.getElementById('submissionStatus').innerHTML = `Submission: <strong>${updatedStatus}</strong>`;
+            }
+        }
+    </script>
+    <div id="taskbar" style="display: flexbox;position:sticky;">
+        <div class="task" style="border-radius: 50%;"> 
+          <a href="erphome.html"><img src="home.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:1cm;
+           width:0.7cm;" /></a> 
+        </div>
+        <div class="task"> 
+          <a href="comment.html"> <img src="chat.jpg" alt="logo" style="border-color: black; height: 0.7cm; padding-left:6cm;
+           width:0.7cm;" /></a>
+        </div>
+        <div class="task"> 
+          <a href="attendance.html"><img src="attendance.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:8cm;
+           width:0.7cm;" /></a>
+        </div>
+        <a href="payment.html" ><div class="task"> 
+           <img src="payment.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:8cm;
+           width:0.7cm;" />
+        </div></a>
+        <div class="task"> 
+           <a href="setting.html" ><img src="setting.jpg" alt="logo" style="border-color: black; height: 0.7cm;padding-left:6cm;
+           width:0.7cm;" /></a>
+        </div>
+    </div>
+</body>
+</html>

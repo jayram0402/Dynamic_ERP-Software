@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="task.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+            color: #333;
+            font-size: 14px;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	        background-size: 400% 400%;
+	        animation: gradient 15s ease infinite;
+            padding: 40px;
+            padding-left: 28%;
+        }
+
+        .form_box {
+            width: 600px;
+            padding: 10px;
+            background-color: yellow;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        input {
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"] {
+            border: none;
+            outline: none;
+            background-color: #679f1b;
+            color: white;
+        }
+
+        .heading {
+            background-color: #ac1219;
+            color: white;
+            height: 40px;
+            width: 100%;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        .shadow {
+            -webkit-box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.43);
+            -moz-box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.43);
+            box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.43);
+        }
+
+        .pic {
+            text-align: left;
+            width: 33%;
+            float: left;
+        }
+        img{
+            width: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form_box shadow">
+
+        <div class="heading">
+            Student Feedback Form
+        </div>
+        <br />
+        <p>What do you think about the quality of our College?</p>
+        <div>
+            <form action="feedback.php" method="POST">
+                <p class="full_name">
+                    <label for="full_name" style="font-size:15px; font-family:georgia; margin-top:10px;">Your
+                        Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your full name . . . ."
+                        autofocus="autofocus" required />
+
+                </p>
+
+                <p class="email">
+                    <label for="email" style="font-size:15px; font-family:georgia margin-top:10px;">Your Email
+                        Address</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email . . . ." required />
+
+                </p>
+                <p class="Phone">
+                    <label for="phone" style="font-size:15px; font-family:georgia margin-top:10px;">Your mobile
+                        no.</label>
+                    <input type="tel" name="phone" id="phone" pattern="[0-9]{10}"
+                        placeholder="Enter your mobile no. . . . ." required />
+
+                </p>
+                <div>
+                    <div class="pic">
+                        <img src="sad.jpg" alt=""> <br />
+                        <input type="radio" name="quality" value="0" id="bad"> Bad
+                    </div>
+                    <div class="pic">
+                        <img src="neutral.jpg" alt=""> <br />
+                        <input type="radio" name="quality" value="1" id="okay"> Okay
+                    </div>
+                    <div class="pic">
+                        <img src="happy.jpg" alt=""> <br />
+                        <input type="radio" name="quality" value="2" id="good" > Good
+                    </div><hr>
+                </div> 
+                 <hr>
+                <textarea name=" suggestion" rows="8" cols="75" id="suggestion" required placeholder=" Do you have any suggestion for us?"></textarea>
+                <input type="submit" name="submit" value="Submit Form">
+            </form>
+        </div>
+</body>
+
+</html>
